@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 18</title>
+    <style>
+        input:required:valid {
+            border-color: green;
+            border: 3px solid green;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" method="post" action="/post">
+        <div>
+            <fieldset>
+                <legend>Имя и контакты</legend>
+                <div>
+                    <label for="animalname">Кличка питомца</label>
+                    <input type="text" name="animalname" placeholder="Кличка питомца" id="animalname" required />
+                </div>
+                <div>
+                    <label for="firstname">Имя владельца</label>
+                    <input type="text" name="firstname" placeholder="Имя владельца" id="firstname" required />
+                </div>
+                <div>
+                    <label for="email">Эл. почта владельца</label>
+                    <input type="email" name="email" placeholder="12345@google.com" id="email" required />
+                </div>
+                <div>
+                    <label for="contact">Телефон владельца</label>
+                    <input type="tel" placeholder="+7 999-999-9999" id="contact" name="contact"
+                        pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$" required>
+                </div>
+            </fieldset>
+        </div>
+
+        <div>
+            <p>Порода питомца</p>
+            <select name="breed">
+                <option value="first breed" name="breed">Породистая</option>
+                <option value="second breed" name="breed" selected="selected">Метис</option>
+                <option value="third breed" name="breed">Дворняжка</option>
+            </select>
+        </div>
+
+        <div>
+            <p>Чем питается?</p>
+            <input type="checkbox" name="food" value="1" />
+            Сухой корм<br />
+            <input type="checkbox" name="food" value="2" />
+            Влажный корм<br />
+            <input type="checkbox" name="food" value="3" />
+            Натуральный корм<br />
+        </div>
+
+        <div>
+            <p>Пол питомца</p>
+            <input type="radio" name="sex" value="girl" /> Девочка<br />
+            <input type="radio" name="sex" value="boy" /> Мальчик<br />
+        </div>
+
+        <div>
+            <label for="comment">Комментарий</label>
+            <textarea type="text" name="comment" id="comment" placeholder="Введите текст" cols="20" rows="10"
+                maxlength="100"></textarea>
+        </div>
+
+        <div>
+            <label for="photo">Можете выбрать фотографию питомца</label>
+            <input type="file" name="photo" id="photo">
+        </div>
+
+        <button type="submit" class="button" id="button" onclick="checkCatsForm()">Сохранить</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
