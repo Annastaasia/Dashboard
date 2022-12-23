@@ -1,0 +1,22 @@
+{
+  "name": "week-22",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anastasiya3895641/Week-22.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anastasiya3895641/Week-22/issues"
+  },
+  "homepage": "https://github.com/Anastasiya3895641/Week-22#readme",
+  "dependencies": {
+    "moment": "^2.29.4"
+  }
+}
