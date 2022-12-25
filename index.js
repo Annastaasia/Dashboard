@@ -1,3 +1,4 @@
+const moment = require("moment/moment");
 
 
 const ctxFirst = document.getElementById('myChart-1').getContext('2d');
@@ -82,7 +83,7 @@ var animateLeft = anime({
 
 var animateBackground = anime({
     targets: '.square',
-    backgroundColor: '#f96',
+    backgroundColor: '#e9e9e9',
     autoplay: false
 });
 
@@ -113,7 +114,8 @@ document.querySelector('.play-all').onclick = animateAll.restart;
 //let date = moment().format('MMMM Do YYYY, h:mm:ss a');
 //document.getElementById('currentDate').innerHTML = `Current date: ${date}`;
 
+//require('moment/locale/ru');
 
-var now = moment();
-moment.lang('ru');
-console.log(now.format('dddd, MMMM DD YYYY, h:mm:ss'));
+
+let timeBlock = document.getElementById('currentDate');
+timeBlock.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
