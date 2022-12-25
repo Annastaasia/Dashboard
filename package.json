@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Anastasiya3895641/Week-22#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "moment": "^2.29.4"
   }
 }

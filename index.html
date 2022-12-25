@@ -6,15 +6,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 22</title>
     <style>
         body {
-            color: rgb(215, 72, 72);
+            background-color: #666464;
+        }
+
+        button {
+            background: orange;
+            color: white;
+            margin: 5px;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: 'Lato';
+            cursor: pointer;
+            border: none;
+            outline: none;
+        }
+
+        button:hover {
+            background: blue;
+        }
+
+        #anime-demo {
+            text-align: left;
+        }
+
+        .square {
+            pointer-events: none;
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: cornflowerblue;
+            margin: 4px;
+            display: inline-block;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .controls {
+            margin-top: 100px;
+        }
+
+        .main__title {
+            padding: 20px;
+            margin: 20px;
+            border-radius: 15px;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            color: rgb(90, 90, 90);
+
+            background-color: #CDCBE2;
+        }
+
+        .date {
+            margin-left: 20px;
+            font-size: 1.2em;
+            color: rgb(204, 204, 204);
+            ;
+        }
+
+        .charts {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+        }
+
+        .chart {
+            background-color: #CDCBE2;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .chart_sales {
+            width: 15%;
+
+            text-align: center;
+        }
+
+        .chart_brands {
+            width: 35%;
+        }
+
+        .chart_sizes {
+            width: 35%;
         }
     </style>
-    <title>Week 22</title>
 </head>
 
 <body>
+    <h1 class="main__title">Sportswear sales dashboard</h1>
+    <div id="anime-demo">
+        <div class="square blue"></div>
+    </div>
+    <div class="controls">
+        <button class="play-left">Animate Left</button>
+        <button class="play-background">Animate Background</button>
+        <button class="play-radius">Animate Border Radius</button>
+        <button class="play-all">Animate All Properties</button>
+    </div>
+
     <div class="one"><canvas id="myChart-1"></canvas></div>
     <div class="one"><canvas id="chart1"></canvas></div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
