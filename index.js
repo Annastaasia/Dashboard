@@ -1,3 +1,5 @@
+
+
 const ctxFirst = document.getElementById('myChart-1').getContext('2d');
 
 let dataJsonFirst = `{
@@ -48,7 +50,7 @@ let chart = new Chart(ctx, {
     }
 });
 
-/*const anime = require('animejs');
+
 
 anime({
     targets: 'div',
@@ -67,7 +69,7 @@ anime({
         grid: [14, 5],
         from: 'center'
     })
-});*/
+});
 
 
 
@@ -106,4 +108,8 @@ document.querySelector('.play-radius').onclick = animateRadius.restart;
 
 document.querySelector('.play-all').onclick = animateAll.restart;
 
+
+
+let date = moment().format('MMMM Do YYYY, h:mm:ss a');
+document.getElementById('currentDate').innerHTML = `Current date: ${date}`;
 
