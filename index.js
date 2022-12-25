@@ -110,6 +110,10 @@ document.querySelector('.play-all').onclick = animateAll.restart;
 
 
 
-let date = moment().format('MMMM Do YYYY, h:mm:ss a');
-document.getElementById('currentDate').innerHTML = `Current date: ${date}`;
+//let date = moment().format('MMMM Do YYYY, h:mm:ss a');
+//document.getElementById('currentDate').innerHTML = `Current date: ${date}`;
 
+
+var now = moment();
+moment.lang('ru');
+console.log(now.format('dddd, MMMM DD YYYY, h:mm:ss'));
