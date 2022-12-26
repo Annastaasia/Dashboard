@@ -16,18 +16,18 @@
         <div>
             <h1 class="main__h1 animateradius animatebackground">Dashboard</h1>
         </div>
-        <div class="main__container1 container-fluid gx-5 row justify-content-end">
-            <div class="date animateradius animatebackground col-4 p-2 mb-4 mt-2 font-weight-bold " id="currentDate">
+        <div class="main__container1 container-fluid gx-5 row justify-content-center">
+            <div class="date animateradius animatebackground col-3 p-2 mb-2 mt-1 font-weight-bold " id="currentDate">
             </div>
             <button style="height: 3.5rem;"
-                class="col-2 offset-md-4 play-radius mb-3 mt-2 btn-outline-success rounded-pill">Animate Border
+                class="col-2 offset-md-3 play-radius mb-2 mt-1 btn-outline-success rounded-pill">Animate Border
                 Radius</button><button style="height: 3.5rem;"
-                class="col-2  play-background mb-3 mt-2 btn-outline-success rounded-pill">Animate
+                class="col-2  play-background mb-2 mt-1 btn-outline-success rounded-pill">Animate
                 Background</button>
         </div>
         <div class="main__container2 container-fluid row gx-5 justify-content-end animateradius animatebackground"
             style="max-width: 81.5rem;">
-            <div class="main__container3 row col-7 align-content-center">
+            <div class="main__container3 row col-5 align-content-center">
                 <h2 class="mb-4">Welcome, Izabella</h2>
                 <p>You have 2 project to finish and already completed 68%.</p>
                 <p>Keep going to your goal!</p>
@@ -35,38 +35,37 @@
                         class="main__button__a btn-outline-success rounded-pill" role="button"> Learn about it </a>
                 </div>
             </div>
-            <div class="col-5"><img style="width: 18rem; --bs-gutter-x: -9.5rem;"
-                    class="mt-3 row d-flex justify-content-center " src="./assets/learning.png" alt="learning girl">
+
+            <div class="col-2"><img style="max-width: 11rem; " class="mt-4 row d-flex justify-content-center "
+                    src="./assets/survey.png" alt="check">
+            </div>
+            <div class="col-3"><img style="max-width: 13rem; --bs-gutter-x: -2rem; "
+                    class="mt-3 row d-flex  justify-content-evenly " src="./assets/learning.png" alt="learning girl">
+            </div>
+            <div class="col-2"><img style="max-width: 11rem; " class="mt-4 row d-flex justify-content-center "
+                    src="./assets/task2.png" alt="task">
             </div>
         </div>
 
-        <div class="one"><canvas id="chart1"></canvas></div>
-        <div>
-            <div>40+<span>Project</span></div><img src="./assets/task.png" alt="task">
-        </div>
-        <div>
-            <div>60+<span>Tasks</span></div><img src="./assets/task.png" alt="task">
-        </div>
-        <div>
-            <p>Task</p>
-            <p>10 min on this week</p>
-            <div class="chart chart_brands"><canvas id="brandsChart"></canvas></div>
-        </div>
-        <div>
-            <p>Task List</p>
-            <p>Decabruary</p>
-            <p class="h1">Чем сегодня заняться?</p><button class="button" id="button">Выбрать занятие</button>
-            <div class="activity" id="activity"></div>
+        <div class="main__container4 container-fluid gx-5 row justify-content-between">
+            <div class="one chart col-4 animateradius animatebackground mt-2"><canvas id="chart1"></canvas></div>
+
+            <div class="chart col-4 animateradius animatebackground mt-2"><canvas id="brandsChart"></canvas></div>
+            <div class="main__activity col-3 animateradius animatebackground mt-2">
+                <p class="mt-3">What to do today?</p>
+                <button class="button btn-outline-success rounded-pill" id="button">Choose activity</button>
+                <div class="activity mt-3" id="activity"></div>
+            </div>
         </div>
     </main>
-    < !--div class="one"><canvas id="myChart-1"></canvas></div-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
-            integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
-        <script src="./index.js"></script>
-        <script src="bundle.js"></script>
+    <!--div class="one"><canvas id="myChart-1"></canvas></div-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <script src="./index.js"></script>
+    <script src="bundle.js"></script>
 </body>
 
 </html>

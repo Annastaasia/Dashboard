@@ -2,8 +2,6 @@
 const moment = require("moment/moment");
 
 
-
-
 /*const ctxFirst = document.getElementById('myChart-1').getContext('2d');
 
 let dataJsonFirst = `{
@@ -43,20 +41,39 @@ let chart = new Chart(ctx, {
 
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [{
-            label: 'Weekly Activity',
-            backgroundColor: ['lightcoral'],
+            label: 'Weekly activity',
+            backgroundColor: ['rgba(255, 99, 132, 0.2)'],
             borderColor: ' rgb(215, 72, 72)',
             data: [1, 5, 2, 4, 7, 3, 10],
             tension: 0.3,
             fill: 'origin',
-            borderWidth: 4
+            borderWidth: 2
         }
 
         ]
     }
 
     ,
-    options: {}
+    options: {
+
+
+        plugins: {
+            title: {
+
+                display: true,
+                text: 'It is your activity',
+                padding: {
+                    top: 10,
+                    bottom: 10
+                }
+
+                ,
+                font: {
+                    size: 24
+                }
+            }
+        }
+    }
 }
 
 );
@@ -146,17 +163,17 @@ timeBlock.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
 
 const brandsData = [0.56,
     0.48,
-    0.37,
-    0.22];
+    0.17,
+    0.32];
 
 const brandsChart = new Chart(document.getElementById('brandsChart'), {
 
     type: 'bar',
     data: {
 
-        labels: ['Adidas', 'Nike', 'Puma', 'Bosco'],
+        labels: ['Programming', 'Walking', 'Reading', 'Playing in game'],
         datasets: [{
-            label: '% of sales',
+            label: '% of weekly activity',
             data: brandsData,
             backgroundColor: ['rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -182,7 +199,7 @@ const brandsChart = new Chart(document.getElementById('brandsChart'), {
             title: {
 
                 display: true,
-                text: 'Top selling brands',
+                text: 'What you doing',
                 padding: {
                     top: 10,
                     bottom: 10
@@ -220,7 +237,7 @@ function getActivity() {
     ).then((data) => document.querySelector('.activity').textContent = data.activity)
 }
 
-button.addEventListener('click', getActivity) 
+button.addEventListener('click', getActivity)
 },{"moment/moment":2}],2:[function(require,module,exports){
 //! moment.js
 //! version : 2.29.4
