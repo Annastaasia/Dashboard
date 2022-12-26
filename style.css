@@ -3,39 +3,21 @@ body {
 }
 
 button {
-    background: rgb(255, 255, 255);
-    color: rgb(40, 161, 46);
-    margin: 5px;
     padding: 10px;
-    border-radius: 4px;
-    font-family: 'Lato';
-    cursor: pointer;
-    border: none;
-    outline: none;
-}
-
-button:hover {
-    background: rgb(188, 218, 174);
+    margin: 5px;
+    font-size: 0.9em;
+    border: 5px solid;
 }
 
 
 
-.square {
-    pointer-events: none;
-    position: relative;
-    width: 200px;
-    height: 200px;
-    background-color: rgb(49, 162, 70);
-    margin: 4px;
-    display: inline-block;
-}
-
-.blue {
-    background: rgb(49, 162, 70);
-}
-
-.controls {
-    margin-top: 100px;
+.main__button__a {
+    padding: 12px;
+    background-color: #ffffff;
+    text-decoration: none;
+    border: #146024 5px solid;
+    height: 3.5rem;
+    max-width: 7.5rem;
 }
 
 .main__h1 {
@@ -50,11 +32,22 @@ button:hover {
 
 .date {
     font-size: 1.2em;
-    margin-right: 60px;
+    margin-right: 70px;
     max-width: max-content;
     color: rgb(127, 8, 66);
     background-color: #5dd176;
-    border: #e9e9e9 8px solid;
+    border: #ffffff 8px solid;
+}
+
+.main__container2 {
+    margin-left: 20px;
+    background-color: #5dd176;
+    border: #ffffff 8px solid;
+    color: rgb(127, 8, 66);
+}
+
+.main__image {
+    padding-left: 120px;
 }
 
 .activity {
