@@ -101,7 +101,7 @@ anime({
 var animateBackground = anime({
     targets: '.animatebackground',
     backgroundColor: '#ffffff',
-
+    borderColor: '#5dd176',
     autoplay: false
 }
 
