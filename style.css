@@ -1,0 +1,94 @@
+body {
+    background-color: #f2a67e;
+}
+
+button {
+    background: rgb(255, 255, 255);
+    color: rgb(40, 161, 46);
+    margin: 5px;
+    padding: 10px;
+    border-radius: 4px;
+    font-family: 'Lato';
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background: rgb(188, 218, 174);
+}
+
+#anime-demo {
+    text-align: left;
+}
+
+.square {
+    pointer-events: none;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(49, 162, 70);
+    margin: 4px;
+    display: inline-block;
+}
+
+.blue {
+    background: rgb(49, 162, 70);
+}
+
+.controls {
+    margin-top: 100px;
+}
+
+.main__title {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 15px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: rgb(127, 8, 66);
+
+    background-color: #5dd176;
+}
+
+.date {
+    margin-left: 20px;
+    font-size: 1.2em;
+    color: rgb(20, 141, 64);
+    ;
+}
+
+.activity {
+    margin-left: 3vw;
+    margin-top: 13vh;
+    color: rgb(68, 173, 192);
+    font-size: 2vw;
+}
+
+.charts {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.chart {
+    background-color: #e9e9e9;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.chart_sales {
+    width: 15%;
+
+    text-align: center;
+}
+
+.chart_brands {
+    width: 35%;
+}
+
+.chart_sizes {
+    width: 35%;
+}

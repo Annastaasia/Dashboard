@@ -6,117 +6,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Week 22</title>
-    <style>
-        body {
-            background-color: #f2a67e;
-        }
-
-        button {
-            background: rgb(255, 255, 255);
-            color: rgb(40, 161, 46);
-            margin: 5px;
-            padding: 10px;
-            border-radius: 4px;
-            font-family: 'Lato';
-            cursor: pointer;
-            border: none;
-            outline: none;
-        }
-
-        button:hover {
-            background: rgb(188, 218, 174);
-        }
-
-        #anime-demo {
-            text-align: left;
-        }
-
-        .square {
-            pointer-events: none;
-            position: relative;
-            width: 200px;
-            height: 200px;
-            background-color: rgb(49, 162, 70);
-            margin: 4px;
-            display: inline-block;
-        }
-
-        .blue {
-            background: rgb(49, 162, 70);
-        }
-
-        .controls {
-            margin-top: 100px;
-        }
-
-        .main__title {
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-
-            text-align: center;
-            text-transform: uppercase;
-
-            color: rgb(127, 8, 66);
-
-            background-color: #5dd176;
-        }
-
-        .date {
-            margin-left: 20px;
-            font-size: 1.2em;
-            color: rgb(20, 141, 64);
-            ;
-        }
-
-        .charts {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 50px;
-        }
-
-        .chart {
-            background-color: #e9e9e9;
-            padding: 20px;
-            border-radius: 15px;
-        }
-
-        .chart_sales {
-            width: 15%;
-
-            text-align: center;
-        }
-
-        .chart_brands {
-            width: 35%;
-        }
-
-        .chart_sizes {
-            width: 35%;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <h1 class="main__title">Dashboard</h1>
-    <div id="anime-demo">
-        <div class="square blue"></div>
-    </div>
-    <div class="controls">
-        <button class="play-left">Animate Left</button>
-        <button class="play-background">Animate Background</button>
-        <button class="play-radius">Animate Border Radius</button>
-        <button class="play-all">Animate All Properties</button>
-    </div>
-    <div class="date" id="currentDate"></div>
+    <main>
+        <h1 class="main__title">Dashboard</h1>
+        <div class="date" id="currentDate"></div>
+        <div>
+            <h2>Welcome, Izabella </h2>
+            <p>You have 2 project to finish and already completed 68%.</p>
+            <p>Keep going to your goal!</p>
+            <div class="button-f d-flex justify-content-center text-center mt-1">
+                <a href="https://#" class="button-f btn-dark rounded-pill text-white" role="button">More</a>
+            </div>
+            <img src="./assets/learning.png" alt="learning girl">
+        </div>
+        <div class="one"><canvas id="chart1"></canvas></div>
+        <div>
+            <div>40+ <span> Project</span></div>
+            <img src="./assets/task.png" alt="task">
+        </div>
+        <div>
+            <div>60+ <span> Tasks</span></div>
+            <img src="./assets/task.png" alt="task">
+        </div>
+        <div>
+            <p>Task</p>
+            <p>10 min on this week</p>
+            <div class="chart chart_brands">
+                <canvas id="brandsChart"></canvas>
+            </div>
+        </div>
+        <div>
+            <p>Task List</p>
+            <p>Decabruary</p>
+            <p class="h1">Чем сегодня заняться?</p>
+            <button class="button" id="button">Выбрать занятие</button>
+            <div class="activity" id="activity">
+            </div>
+        </div>
 
-    <div class="one"><canvas id="myChart-1"></canvas></div>
-    <div class="one"><canvas id="chart1"></canvas></div>
+
+        <div id="anime-demo">
+            <div class="square blue"></div>
+        </div>
+        <div class="controls">
+            <button class="play-left">Animate Left</button>
+            <button class="play-background">Animate Background</button>
+            <button class="play-radius">Animate Border Radius</button>
+            <button class="play-all">Animate All Properties</button>
+        </div>
+
+    </main>
+    <!--div class="one"><canvas id="myChart-1"></canvas></div-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+        crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
     <script src="./index.js"></script>
     <script src="bundle.js"></script>
+
 </body>
 
 </html>

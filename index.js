@@ -1,7 +1,7 @@
 const moment = require("moment/moment");
 
 
-const ctxFirst = document.getElementById('myChart-1').getContext('2d');
+/*const ctxFirst = document.getElementById('myChart-1').getContext('2d');
 
 let dataJsonFirst = `{
     "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
@@ -28,7 +28,7 @@ const myChartFirst = new Chart(ctxFirst, {
             borderWidth: 2
         }]
     }
-});
+});*/
 
 
 let ctx = document.getElementById('chart1').getContext('2d');
@@ -119,3 +119,73 @@ document.querySelector('.play-all').onclick = animateAll.restart;
 
 let timeBlock = document.getElementById('currentDate');
 timeBlock.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
+
+
+const brandsData = [0.56, 0.48, 0.37, 0.22];
+
+const brandsChart = new Chart(document.getElementById('brandsChart'), {
+    type: 'bar',
+    data: {
+        labels: ['Adidas', 'Nike', 'Puma', 'Bosco'],
+        datasets: [{
+            label: '% of sales',
+            data: brandsData,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(100, 206, 86, 0.2)',
+                'rgba(153, 102, 255, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(120, 206, 86, 1)',
+                'rgba(153, 102, 255, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        indexAxis: 'y',
+
+        plugins: {
+            title: {
+                display: true,
+                text: 'Top selling brands',
+                padding: {
+                    top: 10,
+                    bottom: 10
+                },
+                font: {
+                    size: 24
+                }
+            }
+        },
+
+        scales: {
+            x: {
+                ticks: {
+                    format: {
+                        style: 'percent'
+                    }
+                }
+            }
+        }
+    }
+});
+
+const button = document.querySelector('.button')
+
+function getActivity() {
+    fetch('http://www.boredapi.com/api/activity/')
+        .then((response) => {
+            return response.json();
+        })
+        .then((data) =>
+            document.querySelector('.activity').textContent = data.activity)
+
+
+}
+
+button.addEventListener('click', getActivity)
+console.log(data)
