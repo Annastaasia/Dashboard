@@ -14,8 +14,16 @@
 
 <body>
     <main>
-        <h1 class="main__title">Dashboard</h1>
-        <div class="date" id="currentDate"></div>
+        <div>
+            <h1 class="main__h1 animateradius animatebackground">Dashboard</h1>
+        </div>
+        <div class="main__container1 container-fluid gx-5 row justify-content-end">
+            <div class="date animateradius animatebackground col-4 p-2 mb-5 font-weight-bold " id="currentDate">
+            </div>
+            <button class="col-2 offset-md-4 play-background mb-5 btn-outline-success">Animate Background</button>
+            <button class="col-2 play-radius  mb-5 btn-outline-success">Animate Border Radius</button>
+        </div>
+
         <div>
             <h2>Welcome, Izabella </h2>
             <p>You have 2 project to finish and already completed 68%.</p>
@@ -55,10 +63,6 @@
             <div class="square blue"></div>
         </div>
         <div class="controls">
-            <button class="play-left">Animate Left</button>
-            <button class="play-background">Animate Background</button>
-            <button class="play-radius">Animate Border Radius</button>
-            <button class="play-all">Animate All Properties</button>
         </div>
 
     </main>

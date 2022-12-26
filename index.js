@@ -1,6 +1,8 @@
 const moment = require("moment/moment");
 
 
+
+
 /*const ctxFirst = document.getElementById('myChart-1').getContext('2d');
 
 let dataJsonFirst = `{
@@ -32,9 +34,12 @@ const myChartFirst = new Chart(ctxFirst, {
 
 
 let ctx = document.getElementById('chart1').getContext('2d');
+
 let chart = new Chart(ctx, {
+
     type: 'line',
     data: {
+
         labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
         datasets: [{
             label: 'Weekly Activity',
@@ -44,70 +49,87 @@ let chart = new Chart(ctx, {
             tension: 0.3,
             fill: 'origin',
             borderWidth: 4
-        }]
+        }
 
-    },
-    options: {
+        ]
     }
-});
+
+    ,
+    options: {}
+}
+
+);
 
 
 
 anime({
+
     targets: 'div',
     scale: [{
         value: .1,
         easing: 'easeOutSine',
         duration: 500
-    },
+    }
+
+        ,
     {
         value: 1,
         easing: 'easeInOutQuad',
         duration: 1200
     }
+
     ],
     delay: anime.stagger(200, {
         grid: [14, 5],
         from: 'center'
-    })
-});
+    }
+
+    )
+}
+
+);
 
 
 
-var animateLeft = anime({
+/*var animateLeft = anime({
     targets: '.square',
     left: '50%',
     autoplay: false
-});
+});*/
 
 
 var animateBackground = anime({
-    targets: '.square',
-    backgroundColor: '#e9e9e9',
+    targets: '.animatebackground',
+    backgroundColor: '#ffffff',
+
     autoplay: false
-});
+}
+
+);
 
 var animateRadius = anime({
-    targets: '.square',
-    borderRadius: '50%',
+    targets: '.animateradius',
+    borderRadius: '20px',
     autoplay: false
-});
+}
 
-var animateAll = anime({
+);
+
+/*var animateAll = anime({
     targets: '.square',
     backgroundColor: '#f96',
-    borderRadius: '50%',
+    borderRadius: '20px',
     left: '50%',
     autoplay: false
 });
-
-document.querySelector('.play-left').onclick = animateLeft.restart;
+*/
+//document.querySelector('.play-left').onclick = animateLeft.restart;
 
 document.querySelector('.play-background').onclick = animateBackground.restart;
 
 document.querySelector('.play-radius').onclick = animateRadius.restart;
 
-document.querySelector('.play-all').onclick = animateAll.restart;
+//document.querySelector('.play-all').onclick = animateAll.restart;
 
 
 
@@ -121,46 +143,58 @@ let timeBlock = document.getElementById('currentDate');
 timeBlock.innerHTML = moment().format('MMMM Do YYYY, h:mm:ss a');
 
 
-const brandsData = [0.56, 0.48, 0.37, 0.22];
+const brandsData = [0.56,
+    0.48,
+    0.37,
+    0.22];
 
 const brandsChart = new Chart(document.getElementById('brandsChart'), {
+
     type: 'bar',
     data: {
+
         labels: ['Adidas', 'Nike', 'Puma', 'Bosco'],
         datasets: [{
             label: '% of sales',
             data: brandsData,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
+            backgroundColor: ['rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
                 'rgba(100, 206, 86, 0.2)',
                 'rgba(153, 102, 255, 0.2)'
             ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
+            borderColor: ['rgba(255, 99, 132, 1)',
                 'rgba(54, 162, 235, 1)',
                 'rgba(120, 206, 86, 1)',
                 'rgba(153, 102, 255, 1)'
             ],
             borderWidth: 1
-        }]
-    },
+        }
+
+        ]
+    }
+
+    ,
     options: {
         indexAxis: 'y',
 
         plugins: {
             title: {
+
                 display: true,
                 text: 'Top selling brands',
                 padding: {
                     top: 10,
                     bottom: 10
-                },
+                }
+
+                ,
                 font: {
                     size: 24
                 }
             }
-        },
+        }
+
+        ,
 
         scales: {
             x: {
@@ -172,20 +206,17 @@ const brandsChart = new Chart(document.getElementById('brandsChart'), {
             }
         }
     }
-});
-
-const button = document.querySelector('.button')
-
-function getActivity() {
-    fetch('http://www.boredapi.com/api/activity/')
-        .then((response) => {
-            return response.json();
-        })
-        .then((data) =>
-            document.querySelector('.activity').textContent = data.activity)
-
-
 }
 
-button.addEventListener('click', getActivity)
-console.log(data)
+);
+
+const button = document.querySelector('.button')
+function getActivity() {
+    fetch('http://www.boredapi.com/api/activity/').then((response) => {
+        return response.json();
+    }
+
+    ).then((data) => document.querySelector('.activity').textContent = data.activity)
+}
+
+button.addEventListener('click', getActivity) 

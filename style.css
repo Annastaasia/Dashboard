@@ -18,9 +18,7 @@ button:hover {
     background: rgb(188, 218, 174);
 }
 
-#anime-demo {
-    text-align: left;
-}
+
 
 .square {
     pointer-events: none;
@@ -40,24 +38,23 @@ button:hover {
     margin-top: 100px;
 }
 
-.main__title {
+.main__h1 {
     padding: 20px;
     margin: 20px;
-    border-radius: 15px;
-
     text-align: center;
     text-transform: uppercase;
-
+    border: #ffffff 6px solid;
     color: rgb(127, 8, 66);
-
     background-color: #5dd176;
 }
 
 .date {
-    margin-left: 20px;
     font-size: 1.2em;
-    color: rgb(20, 141, 64);
-    ;
+    margin-right: 60px;
+    max-width: max-content;
+    color: rgb(127, 8, 66);
+    background-color: #5dd176;
+    border: #e9e9e9 6px solid;
 }
 
 .activity {
