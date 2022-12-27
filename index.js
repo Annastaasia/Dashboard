@@ -1,36 +1,5 @@
 const moment = require("moment/moment");
 
-
-/*const ctxFirst = document.getElementById('myChart-1').getContext('2d');
-
-let dataJsonFirst = `{
-    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
-    "label": "title",
-    "data": [133, 198, 320, 591, 520, 354, 632]
-}`
-let objDataFirst = JSON.parse(dataJsonFirst);
-
-const myChartFirst = new Chart(ctxFirst, {
-    type: 'line',
-
-    data: {
-        labels: objDataFirst.labels,
-        datasets: [{
-            label: objDataFirst.label,
-            data: objDataFirst.data,
-            fill: 'origin',
-            backgroundColor: [
-                'rgba(8, 69, 166, 0.8)'],
-            borderColor: [
-                'rgba(23, 131, 241, 1)',
-            ],
-            tension: 0.4,
-            borderWidth: 2
-        }]
-    }
-});*/
-
-
 let ctx = document.getElementById('chart1').getContext('2d');
 
 let chart = new Chart(ctx, {
@@ -48,10 +17,8 @@ let chart = new Chart(ctx, {
             fill: 'origin',
             borderWidth: 2
         }
-
         ]
     }
-
     ,
     options: {
 
@@ -77,8 +44,6 @@ let chart = new Chart(ctx, {
 
 );
 
-
-
 anime({
 
     targets: 'div',
@@ -103,16 +68,7 @@ anime({
 
     )
 }
-
 );
-
-
-
-/*var animateLeft = anime({
-    targets: '.square',
-    left: '50%',
-    autoplay: false
-});*/
 
 
 var animateBackground = anime({
@@ -121,7 +77,6 @@ var animateBackground = anime({
     borderColor: '#5dd176',
     autoplay: false
 }
-
 );
 
 var animateRadius = anime({
@@ -129,31 +84,10 @@ var animateRadius = anime({
     borderRadius: '20px',
     autoplay: false
 }
-
 );
 
-/*var animateAll = anime({
-    targets: '.square',
-    backgroundColor: '#f96',
-    borderRadius: '20px',
-    left: '50%',
-    autoplay: false
-});
-*/
-//document.querySelector('.play-left').onclick = animateLeft.restart;
-
 document.querySelector('.play-background').onclick = animateBackground.restart;
-
 document.querySelector('.play-radius').onclick = animateRadius.restart;
-
-//document.querySelector('.play-all').onclick = animateAll.restart;
-
-
-
-//let date = moment().format('MMMM Do YYYY, h:mm:ss a');
-//document.getElementById('currentDate').innerHTML = `Current date: ${date}`;
-
-//require('moment/locale/ru');
 
 
 let timeBlock = document.getElementById('currentDate');
@@ -165,7 +99,7 @@ const brandsData = [0.56,
     0.17,
     0.32];
 
-const brandsChart = new Chart(document.getElementById('brandsChart'), {
+const brandsChart = new Chart(document.getElementById('chart2'), {
 
     type: 'bar',
     data: {
@@ -227,7 +161,7 @@ const brandsChart = new Chart(document.getElementById('brandsChart'), {
 
 );
 
-const button = document.querySelector('.button')
+const button = document.querySelector('.button');
 function getActivity() {
     fetch('http://www.boredapi.com/api/activity/').then((response) => {
         return response.json();
@@ -237,3 +171,58 @@ function getActivity() {
 }
 
 button.addEventListener('click', getActivity)
+
+
+/*const ctxFirst = document.getElementById('myChart-1').getContext('2d');
+
+let dataJsonFirst = `{
+    "labels": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul"],
+    "label": "title",
+    "data": [133, 198, 320, 591, 520, 354, 632]
+}`
+let objDataFirst = JSON.parse(dataJsonFirst);
+
+const myChartFirst = new Chart(ctxFirst, {
+    type: 'line',
+
+    data: {
+        labels: objDataFirst.labels,
+        datasets: [{
+            label: objDataFirst.label,
+            data: objDataFirst.data,
+            fill: 'origin',
+            backgroundColor: [
+                'rgba(8, 69, 166, 0.8)'],
+            borderColor: [
+                'rgba(23, 131, 241, 1)',
+            ],
+            tension: 0.4,
+            borderWidth: 2
+        }]
+    }
+});*/
+
+/*var animateLeft = anime({
+    targets: '.square',
+    left: '50%',
+    autoplay: false
+});*/
+
+/*var animateAll = anime({
+    targets: '.square',
+    backgroundColor: '#f96',
+    borderRadius: '20px',
+    left: '50%',
+    autoplay: false
+});
+*/
+//document.querySelector('.play-left').onclick = animateLeft.restart;
+
+//document.querySelector('.play-all').onclick = animateAll.restart;
+
+
+
+//let date = moment().format('MMMM Do YYYY, h:mm:ss a');
+//document.getElementById('currentDate').innerHTML = `Current date: ${date}`;
+
+//require('moment/locale/ru');
